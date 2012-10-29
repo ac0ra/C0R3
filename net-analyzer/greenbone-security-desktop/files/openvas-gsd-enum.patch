@@ -1,0 +1,63 @@
+Patch to fix type definition of omp_type,omp_entity_command,omp_task_command
+Author: Michal Ambroz <rebus ,at seznam.cz>
+diff -ru gsd-1.2.1/src/gsd_control.cpp gsd-1.2.1.new/src/gsd_control.cpp
+--- gsd-1.2.1/src/gsd_control.cpp	2011-12-09 15:31:24.000000000 +0100
++++ gsd-1.2.1.new/src/gsd_control.cpp	2012-03-27 01:17:00.335974244 +0200
+@@ -1345,7 +1345,7 @@
+                      model_omp_entity *m,
+                      QMap<QString, QString>parameter)
+ {
+-  this->connector->modifyEntity (type, id, m, parameter);
++  this->connector->modifyEntity ((omp_utilities::omp_type)type, id, m, parameter);
+ }
+ 
+ 
+@@ -2213,7 +2213,7 @@
+ gsd_control::create (int type, QMap<QString, QString> parameter)
+ {
+   model_omp_entity *m = new model_omp_entity();
+-  connector->createEntity(type, m, parameter);
++  connector->createEntity((omp_utilities::omp_type)type, m, parameter);
+ }
+ 
+ /**
+diff -ru gsd-1.2.1/src/omp_utilities.h gsd-1.2.1.new/src/omp_utilities.h
+--- gsd-1.2.1/src/omp_utilities.h	2011-12-09 15:31:24.000000000 +0100
++++ gsd-1.2.1.new/src/omp_utilities.h	2012-03-27 01:25:14.799127224 +0200
+@@ -49,7 +49,7 @@
+     omp_utilities ();
+     ~omp_utilities ();
+ 
+-    enum omp_type_t
++    enum omp_type
+       {
+         NONE = 0,
+         AGENT = 1,
+@@ -74,7 +74,7 @@
+         REPORT_FORMAT = 20,
+         SLAVE = 21,
+       };
+-    typedef int omp_type;
++    /* typedef omp_type_t omp_type; */
+ 
+     enum omp_entity_command
+       {
+@@ -87,7 +87,7 @@
+         OMP_PREFERENCES =36,
+         OMP_EXPORT = 37,
+       };
+-    typedef int omp_entity_command;
++    /* typedef int omp_entity_command; */
+ 
+     enum omp_task_command
+       {
+@@ -97,7 +97,8 @@
+         RESUME_STOPPED = 43,
+         RESUME_PAUSED = 44,
+       };
+-    typedef int omp_task_command;
++    /* typedef int omp_task_command; */
++
+     int checkResponse (QString response);
+     omp_type getType (QString);
+ 
