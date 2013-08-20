@@ -14,9 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=net-analyzer/openvas-libraries-4
-	x11-libs/qt-gui:4
-	x11-libs/qt-webkit:4"
+RDEPEND=">=net-analyzer/openvas-libraries-4"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	dev-util/cmake"

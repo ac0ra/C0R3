@@ -1,0 +1,26 @@
+diff --git a/aux/broctl/BroControl/options.py b/aux/broctl/BroControl/options.py
+index d3b6de5..3919410 100644
+--- a/aux/broctl/BroControl/options.py
++++ b/aux/broctl/BroControl/options.py
+@@ -127,7 +127,7 @@ options = [
+            "Directory for log postprocessors."),
+     Option("HelperDir", "${BroBase}/share/broctl/scripts/helpers", "string", Option.AUTOMATIC, False,
+            "Directory for broctl helper scripts."),
+-    Option("CfgDir", "${BroBase}/etc", "string", Option.AUTOMATIC, False,
++    Option("CfgDir", "/etc", "string", Option.AUTOMATIC, False,
+            "Directory for configuration files."),
+     Option("SpoolDir", "${BroBase}/spool", "string", Option.AUTOMATIC, False,
+            "Directory for run-time data."),
+diff --git a/aux/broctl/bin/broctl.in b/aux/broctl/bin/broctl.in
+index 910cbbd..0b9b2b7 100755
+--- a/aux/broctl/bin/broctl.in
++++ b/aux/broctl/bin/broctl.in
+@@ -863,7 +863,7 @@ def saveState(loop):
+         print >>sys.stderr, "abnormal termination, saving state ..."
+         Config.writeState()
+ 
+-Config = config.Configuration("etc/broctl.cfg", BroBase, Version)
++Config = config.Configuration("../etc/broctl.cfg", "/usr", Version)
+ 
+ for dir in Config.sitepluginpath.split(":") + [Config.plugindir]:
+     if dir:

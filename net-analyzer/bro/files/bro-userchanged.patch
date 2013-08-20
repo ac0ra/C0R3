@@ -1,0 +1,91 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 241a5b2..42a41c4 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -186,5 +186,3 @@ message(
+     "\n"
+     "\n================================================================\n"
+ )
+-
+-include(UserChangedWarning)
+diff --git a/aux/binpac/CMakeLists.txt b/aux/binpac/CMakeLists.txt
+index de5768d..a25803d 100644
+--- a/aux/binpac/CMakeLists.txt
++++ b/aux/binpac/CMakeLists.txt
+@@ -61,4 +61,3 @@ message(
+     "\n================================================================\n"
+ )
+ 
+-include(UserChangedWarning)
+diff --git a/aux/bro-aux/CMakeLists.txt b/aux/bro-aux/CMakeLists.txt
+index cc26826..b206bd9 100644
+--- a/aux/bro-aux/CMakeLists.txt
++++ b/aux/bro-aux/CMakeLists.txt
+@@ -96,4 +96,3 @@ message(
+     "\n================================================================\n"
+ )
+ 
+-include(UserChangedWarning)
+diff --git a/aux/broccoli/CMakeLists.txt b/aux/broccoli/CMakeLists.txt
+index 72151d4..9942be1 100644
+--- a/aux/broccoli/CMakeLists.txt
++++ b/aux/broccoli/CMakeLists.txt
+@@ -169,4 +169,3 @@ message(
+     "\n================================================================\n"
+ )
+ 
+-include(UserChangedWarning)
+diff --git a/aux/broccoli/bindings/broccoli-python/CMakeLists.txt b/aux/broccoli/bindings/broccoli-python/CMakeLists.txt
+index f4be86b..215ebd9 100644
+--- a/aux/broccoli/bindings/broccoli-python/CMakeLists.txt
++++ b/aux/broccoli/bindings/broccoli-python/CMakeLists.txt
+@@ -73,4 +73,3 @@ message(
+     "\n================================================================\n"
+ )
+ 
+-include(UserChangedWarning)
+diff --git a/aux/broccoli/bindings/broccoli-ruby/CMakeLists.txt b/aux/broccoli/bindings/broccoli-ruby/CMakeLists.txt
+index 2b8cbe7..5ba4726 100644
+--- a/aux/broccoli/bindings/broccoli-ruby/CMakeLists.txt
++++ b/aux/broccoli/bindings/broccoli-ruby/CMakeLists.txt
+@@ -113,4 +113,3 @@ message(
+     "\n================================================================\n"
+ )
+ 
+-include(UserChangedWarning)
+diff --git a/aux/broctl/CMakeLists.txt b/aux/broctl/CMakeLists.txt
+index a7b98fa..3f56db0 100644
+--- a/aux/broctl/CMakeLists.txt
++++ b/aux/broctl/CMakeLists.txt
+@@ -260,4 +260,3 @@ message(
+     "\n================================================================\n"
+ )
+ 
+-include(UserChangedWarning)
+diff --git a/aux/broctl/aux/capstats/CMakeLists.txt b/aux/broctl/aux/capstats/CMakeLists.txt
+index 2c6b5b3..5af2b32 100644
+--- a/aux/broctl/aux/capstats/CMakeLists.txt
++++ b/aux/broctl/aux/capstats/CMakeLists.txt
+@@ -65,4 +65,3 @@ target_link_libraries(capstats ${PCAP_LIBRARY})
+ 
+ install(TARGETS capstats DESTINATION bin)
+ 
+-include(UserChangedWarning)
+diff --git a/aux/broctl/aux/pysubnettree/CMakeLists.txt b/aux/broctl/aux/pysubnettree/CMakeLists.txt
+index dcd200a..91beaaa 100644
+--- a/aux/broctl/aux/pysubnettree/CMakeLists.txt
++++ b/aux/broctl/aux/pysubnettree/CMakeLists.txt
+@@ -76,4 +76,3 @@ message(
+     "\n================================================================\n"
+ )
+ 
+-include(UserChangedWarning)
+diff --git a/aux/broctl/aux/trace-summary/CMakeLists.txt b/aux/broctl/aux/trace-summary/CMakeLists.txt
+index 8d5a260..ad6aeb7 100644
+--- a/aux/broctl/aux/trace-summary/CMakeLists.txt
++++ b/aux/broctl/aux/trace-summary/CMakeLists.txt
+@@ -50,4 +50,3 @@ message(
+     "\n================================================================\n"
+ )
+ 
+-include(UserChangedWarning)

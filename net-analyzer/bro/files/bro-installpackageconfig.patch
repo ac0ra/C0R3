@@ -1,0 +1,94 @@
+diff --git a/aux/broccoli/CMakeLists.txt b/aux/broccoli/CMakeLists.txt
+index 72151d4..ffb0dec 100644
+--- a/aux/broccoli/CMakeLists.txt
++++ b/aux/broccoli/CMakeLists.txt
+@@ -105,10 +105,7 @@ add_definitions(-DHAVE_CONFIG_H)
+ 
+ include(InstallPackageConfigFile)
+ 
+-InstallPackageConfigFile(
+-    ${CMAKE_CURRENT_SOURCE_DIR}/broccoli.conf
+-    ${BRO_SYSCONF_DIR}
+-    broccoli.conf)
++install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/broccoli.conf DESTINATION ${BRO_SYSCONF_DIR})
+ 
+ install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/broccoli-config DESTINATION bin)
+ 
+diff --git a/aux/broctl/CMakeLists.txt b/aux/broctl/CMakeLists.txt
+index a7b98fa..3e25025 100644
+--- a/aux/broctl/CMakeLists.txt
++++ b/aux/broctl/CMakeLists.txt
+@@ -191,33 +191,24 @@ if (NOT APPLE AND (${CMAKE_INSTALL_PREFIX} STREQUAL /usr OR
+     set(EMPTY_WORLD_DIRS
+         "${EMPTY_WORLD_DIRS} ${SPOOL} ${SPOOL}/tmp ${SPOOL}/scripts ${LOGS}"
+         CACHE STRING "" FORCE)
+-    InstallSymlink(${SPOOL}/broctl-config.sh
+-                   ${PREFIX}/share/broctl/scripts/broctl-config.sh)
++    # InstallSymlink(${SPOOL}/broctl-config.sh
++    #                ${PREFIX}/share/broctl/scripts/broctl-config.sh)
+ else ()
+     install(DIRECTORY DESTINATION spool)
+     install(DIRECTORY DESTINATION spool/tmp)
+     install(DIRECTORY DESTINATION spool/scripts)
+     install(DIRECTORY DESTINATION logs)
+-    InstallSymlink(${PREFIX}/spool/broctl-config.sh
+-                   ${PREFIX}/share/broctl/scripts/broctl-config.sh)
++    # InstallSymlink(${PREFIX}/spool/broctl-config.sh
++    #                ${PREFIX}/share/broctl/scripts/broctl-config.sh)
+ endif ()
+ 
+ # A couple of configuration options that are needed are placed in here.
+ configure_file(etc/broctl.cfg.in
+                ${CMAKE_CURRENT_BINARY_DIR}/etc/broctl.cfg)
+ 
+-InstallPackageConfigFile(
+-    ${CMAKE_CURRENT_BINARY_DIR}/etc/broctl.cfg
+-    ${ETC}
+-    broctl.cfg)
+-InstallPackageConfigFile(
+-    ${CMAKE_CURRENT_SOURCE_DIR}/etc/networks.cfg
+-    ${ETC}
+-    networks.cfg)
+-InstallPackageConfigFile(
+-    ${CMAKE_CURRENT_SOURCE_DIR}/etc/node.cfg
+-    ${ETC}
+-    node.cfg)
++install(FILES ${CMAKE_CURRENT_BINARY_DIR}/etc/broctl.cfg DESTINATION ${ETC})
++install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/networks.cfg DESTINATION ${ETC})
++install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/node.cfg DESTINATION ${ETC})
+ 
+ ########################################################################
+ ## Packaging Setup
+diff --git a/scripts/CMakeLists.txt b/scripts/CMakeLists.txt
+index 6d6faf7..ad14918 100644
+--- a/scripts/CMakeLists.txt
++++ b/scripts/CMakeLists.txt
+@@ -1,28 +1,8 @@
+ include(InstallPackageConfigFile)
+ 
+ install(DIRECTORY ./ DESTINATION ${BRO_SCRIPT_INSTALL_PATH} FILES_MATCHING
+-        PATTERN "site/local*" EXCLUDE
+         PATTERN "test-all-policy.bro" EXCLUDE
+         PATTERN "*.bro"
+         PATTERN "*.sig"
+         PATTERN "*.fp"
+ )
+-
+-# Install all local* scripts as config files since they are meant to be
+-# user modify-able.
+-InstallPackageConfigFile(
+-    ${CMAKE_CURRENT_SOURCE_DIR}/site/local.bro
+-    ${BRO_SCRIPT_INSTALL_PATH}/site
+-    local.bro)
+-InstallPackageConfigFile(
+-    ${CMAKE_CURRENT_SOURCE_DIR}/site/local-manager.bro
+-    ${BRO_SCRIPT_INSTALL_PATH}/site
+-    local-manager.bro)
+-InstallPackageConfigFile(
+-    ${CMAKE_CURRENT_SOURCE_DIR}/site/local-proxy.bro
+-    ${BRO_SCRIPT_INSTALL_PATH}/site
+-    local-proxy.bro)
+-InstallPackageConfigFile(
+-    ${CMAKE_CURRENT_SOURCE_DIR}/site/local-worker.bro
+-    ${BRO_SCRIPT_INSTALL_PATH}/site
+-    local-worker.bro)
