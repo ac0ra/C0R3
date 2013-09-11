@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/graphite-web
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  27 Oct 2011; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Removed no-herd from herd tag in metadata.xml
+
+  15 Apr 2011; Justin Lecher <jlec@gentoo.org> graphite-web-0.9.8.ebuild,
+  +metadata.xml:
+  Fix distutils deprecation warning on multiple pyABI
+
