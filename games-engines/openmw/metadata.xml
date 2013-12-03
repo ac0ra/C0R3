@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<longdescription lang="en">
+		OpenMW is an attempt to reimplement the popular role playing game Morrowind. It aims to be a fully playable, open source implementation of the game. You must own Morrowind to use OpenMW.
+	</longdescription>
+	<use>
+		<flag name="launcher">Build launcher</flag>
+		<flag name="minimal">Don't build utilities that don't require extra dependencies</flag>
+		<flag name="opencs">Build OpenMW Construction Set</flag>
+		<flag name="profile">Enable code coverage with gconv</flag>
+		<flag name="tr1">Use TR1 libraries</flag>
+	</use>
+</pkgmetadata>
+
