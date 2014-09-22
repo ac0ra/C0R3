@@ -6,6 +6,8 @@ EAPI=3
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_COMPAT=( python2_{5,6,7} pypy{1_9,2_0} )
+
 
 inherit distutils
 
