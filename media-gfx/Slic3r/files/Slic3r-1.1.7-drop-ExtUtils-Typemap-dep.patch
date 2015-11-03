@@ -1,0 +1,24 @@
+commit df5c2a6f111c45f13952c357359766061d7c174c
+Author: Kent Fredric <kentfredric@gmail.com>
+Date:   Sat Feb 14 06:44:22 2015 +1300
+
+    Remove redundant dep on ExtUtils::Typemap
+    
+     Typemap (Singluar) version 1.00 is essentially identical to Typemaps (Plural)
+     Typemap is literally a dumb subclass of TypeMaps, and so this
+     dependency simply gives an extra installation requirement that does
+     nothing.
+
+diff --git a/xs/Build.PL b/xs/Build.PL
+index d68c3fa..bc18bc5 100644
+--- a/xs/Build.PL
++++ b/xs/Build.PL
+@@ -29,7 +29,7 @@ my $build = Module::Build::WithXSpp->new(
+     dist_abstract   => 'XS code for Slic3r',
+     build_requires => {qw(
+         ExtUtils::ParseXS           3.18
+-        ExtUtils::Typemap           1.00
++        ExtUtils::Typemaps          1.00
+         ExtUtils::Typemaps::Default 1.03
+         ExtUtils::XSpp              0.17
+         Module::Build               0.3601

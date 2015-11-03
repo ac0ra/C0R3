@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>axs@gentoo.org</email>
+    <name>Ian Stakenvicius</name>
+  </maintainer>
+  <use>
+    <flag name='gui'>Ensure dependencies are installed so that GUI will work</flag>
+    <flag name='minimal'>Drops optional features, such as: opengl support, octoprint uploading, and AMF file parsing</flag>
+  </use>
+</pkgmetadata>
