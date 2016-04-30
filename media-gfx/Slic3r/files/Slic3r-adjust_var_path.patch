@@ -1,0 +1,11 @@
+--- a/lib/Slic3r.pm	2015-02-12 16:29:59.304970375 -0500
++++ b/lib/Slic3r.pm	2015-02-12 16:35:14.824976135 -0500
+@@ -30,7 +30,7 @@
+     if $^V == v5.16;
+ 
+ use FindBin;
+-our $var = "$FindBin::Bin/var";
++our $var = "$FindBin::RealBin/var";
+ 
+ use Encode;
+ use Encode::Locale;
