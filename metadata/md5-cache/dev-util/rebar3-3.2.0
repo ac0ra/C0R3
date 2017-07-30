@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=>=dev-lang/erlang-15.2.3
+DESCRIPTION=A sophisticated build-tool for Erlang projects that follows OTP principles
+EAPI=6
+HOMEPAGE=https://github.com/erlang/rebar3
+KEYWORDS=amd64
+LICENSE=Apache-2.0
+RDEPEND=>=dev-lang/erlang-15.2.3
+SLOT=0
+SRC_URI=https://github.com/erlang/rebar3/archive/3.2.0.tar.gz -> rebar3-3.2.0.tar.gz
+_eclasses_=bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
+_md5_=f2360bfac56f86d1bc2562c34fc25089

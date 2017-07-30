@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst
+DEPEND=>=virtual/jre-1.6
+DESCRIPTION=PhpStorm
+EAPI=4
+HOMEPAGE=http://www.jetbrains.com/phpstorm/
+KEYWORDS=~x86 ~amd64
+RESTRICT=strip mirror
+SLOT=0
+SRC_URI=http://download.jetbrains.com/webide/PhpStorm-EAP-141.2325.tar.gz
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
+_md5_=0a8b943c1455509987b3087330e97e10

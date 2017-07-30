@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=Pure-Python library for performing client operations using the WBEM CIM-XML protocol.
+EAPI=5
+HOMEPAGE=http://pywbem.sf.net/
+IUSE=twisted python_targets_python2_7
+KEYWORDS=~x86 ~amd64
+LICENSE=LGPL-2
+RDEPEND=twisted? ( dev-python/twisted dev-python/twisted-web ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=mirror://sourceforge/project/pywbem/pywbem/pywbem-0.7/pywbem-0.7.0.tar.gz
+_eclasses_=distutils-r1	674dae153419b2200ae54e879cc65b57	eutils	792f83d5ec9536cb5ccef375469d8bde	multibuild	72647e255187a1fadc81097b3657e5c3	multilib	d062ae4ba2fc40a19c11de2ad89b6616	multiprocessing	284a473719153462f3e974d86c8cb81c	python-r1	e9350ec46bb5c9f3504b4fbe8b8d8987	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	versionator	99ae9d758cbe7cfed19170e7d48f5a9c	xdg-utils	b9389dfad0ee8f8e0b2a41b79fcf7120
+_md5_=cbbf4327b99a7bc8b464cc3a71dd2b98
