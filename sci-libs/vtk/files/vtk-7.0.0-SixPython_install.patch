@@ -1,0 +1,6 @@
+--- VTK-7.0.0/ThirdParty/SixPython/CMakeLists.txt_orig	2016-01-28 17:17:38.000000000 +0100
++++ VTK-7.0.0/ThirdParty/SixPython/CMakeLists.txt	2017-01-30 16:25:47.691306354 +0100
+@@ -1,2 +1,2 @@
+ include(vtkModuleMacrosPython)
+-vtk_module_python_module(${vtk-module} six.py CAN_USE_SYSTEM)
++vtk_module_python_module(${vtk-module} six.py NO_INSTALL CAN_USE_SYSTEM)
