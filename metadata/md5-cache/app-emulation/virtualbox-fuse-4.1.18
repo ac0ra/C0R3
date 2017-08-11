@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DEPEND=app-emulation/virtualbox
+DESCRIPTION=FUSE filesystem for mounting VirtualBox virtual drives
+EAPI=5
+HOMEPAGE=http://packages.debian.org/sid/virtualbox-fuse
+KEYWORDS=~x86 ~amd64
+LICENSE=GPL-2
+RDEPEND=app-emulation/virtualbox
+SLOT=0
+SRC_URI=mirror://debian/pool/main/v/virtualbox/virtualbox_4.1.18-dfsg-2+deb7u1.debian.tar.gz http://download.virtualbox.org/virtualbox/4.1.18/VirtualBox-4.1.18.tar.bz2
+_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
+_md5_=e643ccce648deecad0e697bf5f2bd3ea
