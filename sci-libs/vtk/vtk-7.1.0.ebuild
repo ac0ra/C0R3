@@ -100,7 +100,6 @@ RDEPEND="
 		dev-python/twisted-core[${PYTHON_USEDEP}]
 		dev-python/zope-interface[${PYTHON_USEDEP}]
 	)
-	>=x11-libs/gl2ps-1.3.8
 	x11-libs/libX11
 	x11-libs/libXmu
 	x11-libs/libXt"
@@ -113,8 +112,6 @@ S="${WORKDIR}"/VTK-${PV}
 PATCHES=(
 	"${FILESDIR}"/${PN}-7.0.0-glext.patch
 	"${FILESDIR}"/${PN}-6.1.0-memset.patch
-	"${FILESDIR}"/${PN}-6.1.0-gdal2.patch
-	"${FILESDIR}"/ffmpeg3.patch
 	"${FILESDIR}"/${PN}-7.0.0-SixPython_install.patch
 	)
 
@@ -134,7 +131,7 @@ src_prepare() {
 
 	local x
 	# missing: VPIC alglib exodusII freerange ftgl libproj4 mrmpi sqlite utf8 verdict xmdf2 xmdf3
-	for x in expat freetype gl2ps hdf5 jpeg jsoncpp libxml2 netcdf oggtheora png tiff zlib; do
+	for x in expat freetype hdf5 jpeg jsoncpp libxml2 netcdf oggtheora png tiff zlib; do
 		ebegin "Dropping bundled ${x}"
 		rm -r ThirdParty/${x}/vtk${x} || die
 		eend $?
@@ -162,7 +159,6 @@ src_configure() {
 		-DVTK_USE_SYSTEM_EXPAT=ON
 		-DVTK_USE_SYSTEM_FREETYPE=ON
 		-DVTK_USE_SYSTEM_FreeType=ON
-		-DVTK_USE_SYSTEM_GL2PS=ON
 		-DVTK_USE_SYSTEM_HDF5=ON
 		-DVTK_USE_SYSTEM_JPEG=ON
 		-DVTK_USE_SYSTEM_LIBPROJ4=OFF
@@ -178,6 +174,10 @@ src_configure() {
 		-DVTK_USE_SYSTEM_ZLIB=ON
 		-DVTK_USE_SYSTEM_ZOPE=ON
 		-DVTK_USE_SYSTEM_LIBRARIES=ON
+ 		# Use bundled gl2ps (bundled version is a patched version of 1.3.9. Post 1.3.9 versions should be compatible)
+ 		-DVTK_USE_SYSTEM_GL2PS=OFF
+ 		# Use bundled diy2 (no gentoo package / upstream does not provide a Finddiy2.cmake or diy2Config.cmake / diy2-config.cmake)
+ 		-DVTK_USE_SYSTEM_DIY2=OFF
 		-DVTK_USE_GL2PS=ON
 		-DVTK_USE_LARGE_DATA=ON
 		-DVTK_USE_PARALLEL=ON
