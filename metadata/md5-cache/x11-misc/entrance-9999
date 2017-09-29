@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare unpack
-DEPEND=>=dev-libs/efl-1.8.1 >=media-libs/elementary-1.8.0 app-admin/sudo sys-apps/dbus x11-libs/libxcb consolekit? ( sys-auth/consolekit ) pam? ( sys-libs/pam ) !<sys-apps/systemd-192 virtual/pkgconfig >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/git
+DEPEND=>=dev-libs/efl-1.8.1 >=media-libs/elementary-1.8.0 app-admin/sudo sys-apps/dbus x11-libs/libxcb consolekit? ( sys-auth/consolekit ) pam? ( sys-libs/pam ) !<sys-apps/systemd-192 virtual/pkgconfig >=app-portage/elt-patches-20170422 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/git
 DESCRIPTION=Display-manager based on efl
 EAPI=5
 HOMEPAGE=http://www.enlightenment.org/
@@ -7,5 +7,5 @@ IUSE=consolekit ekbd grub2 pam
 LICENSE=GPL-3
 RDEPEND=>=dev-libs/efl-1.8.1 >=media-libs/elementary-1.8.0 app-admin/sudo sys-apps/dbus x11-libs/libxcb consolekit? ( sys-auth/consolekit ) pam? ( sys-libs/pam )
 SLOT=0
-_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	git-2	672c3929a162f221a53b4ccb4d25d8a2	libtool	e32ea84bf82cf8987965b574672dba93	multilib	d062ae4ba2fc40a19c11de2ad89b6616	pam	3e788d86170dfcd5b06824d898315e18	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	git-2	672c3929a162f221a53b4ccb4d25d8a2	libtool	0081a71a261724730ec4c248494f044d	multilib	d062ae4ba2fc40a19c11de2ad89b6616	pam	3e788d86170dfcd5b06824d898315e18	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
 _md5_=1c4e75b10733f6e8bc8fd413558c005b
