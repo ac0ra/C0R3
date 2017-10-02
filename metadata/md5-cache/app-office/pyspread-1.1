@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=dev-python/numpy-1.1.0 >=dev-python/wxpython-2.8.10.1 >=dev-python/matplotlib-1.1.1 >=dev-python/pycairo-1.8.8 >=dev-python/xlrd-0.9.2 >=dev-python/xlwt-0.9.2 >=dev-python/jedi-0.8.0 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=Pyspread is a cross-platform Python spreadsheet application. It is based on and written in the programming language Python.
+EAPI=5
+HOMEPAGE=http://pyspread.sourceforge.net/
+IUSE=python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=https://github.com/manns/pyspread/archive/v1.1.tar.gz
+_eclasses_=distutils-r1	674dae153419b2200ae54e879cc65b57	eutils	792f83d5ec9536cb5ccef375469d8bde	multibuild	72647e255187a1fadc81097b3657e5c3	multilib	d062ae4ba2fc40a19c11de2ad89b6616	multiprocessing	6f5991c7101863d0b29df63990ad852e	python-r1	e9350ec46bb5c9f3504b4fbe8b8d8987	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	xdg-utils	f2c8335407f0b935b0a96d4adf23ef25
+_md5_=f762ff984092f1c7c0494fd0469985c5

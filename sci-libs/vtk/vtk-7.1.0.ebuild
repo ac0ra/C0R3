@@ -97,7 +97,7 @@ RDEPEND="
 	web? (
 		${WEBAPP_DEPEND}
 		dev-python/autobahn[${PYTHON_USEDEP}]
-		dev-python/twisted-core[${PYTHON_USEDEP}]
+		dev-python/twisted[${PYTHON_USEDEP}]
 		dev-python/zope-interface[${PYTHON_USEDEP}]
 	)
 	x11-libs/libX11
