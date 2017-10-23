@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DEPEND=sys-libs/ncurses[unicode]
+DESCRIPTION=Command line interface to manage hierarchical todos
+EAPI=3
+HOMEPAGE=http://code.meskio.net
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=sys-libs/ncurses[unicode]
+SLOT=0
+SRC_URI=http://code.meskio.net/tudu/tudu-0.10.tar.gz
+_md5_=352bdbbf8de346077759d1d3dcb31751

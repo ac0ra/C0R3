@@ -1,0 +1,55 @@
+From 6b60134bb0e7b8d02b787baffc9a434a3676b401 Mon Sep 17 00:00:00 2001
+From: Ruben Pollan <meskio@sindominio.net>
+Date: Sat, 12 Feb 2011 04:12:36 +0100
+Subject: [PATCH] Listing -lncursesw before object (or C) files using it
+
+Fixing debian bug #611077
+---
+ configure        |    2 +-
+ configure.acr    |    2 +-
+ src/Makefile.acr |    2 +-
+ todo.xml         |   15 +++++++++++++++
+ 4 files changed, 18 insertions(+), 3 deletions(-)
+
+diff --git a/configure b/configure
+index 440e600..cc8a569 100755
+--- a/configure
++++ b/configure
+@@ -350,7 +350,7 @@ if [ "$LD_CURSES" = "" ]; then
+ case "$undefined_variable" in 0|"") echo ; echo "ERROR: There is no curses installed!" >&2 ; echo ; exit 1 ;; esac; fi
+ LDFLAGS="${LDFLAGS} $LD_CURSES"
+ printf "checking for WIDEC_CURSES... "
+-echo "#define _XOPEN_SOURCE_EXTENDED" > test.c  ; echo "#include<$CURSES_INCLUDE>" >> test.c  ; echo "main(){ addwstr(L\"\"); }" >> test.c  ; eval \$${COMPILER} ${CXXFLAGS} ${LDFLAGS} test.c >/dev/null 2>&1  ; if [ $? = 0 ]; then WIDEC_CURSES=1; else WIDEC_CURSES=0; fi  ; rm test.c 
++echo "#define _XOPEN_SOURCE_EXTENDED" > test.c  ; echo "#include<$CURSES_INCLUDE>" >> test.c  ; echo "main(){ addwstr(L\"\"); }" >> test.c  ; eval \$${COMPILER} ${CXXFLAGS} test.c ${LDFLAGS} >/dev/null 2>&1  ; if [ $? = 0 ]; then WIDEC_CURSES=1; else WIDEC_CURSES=0; fi  ; rm test.c 
+ if [ "$WIDEC_CURSES" = 1 ]; then
+ 	echo yes
+ else
+diff --git a/configure.acr b/configure.acr
+index 4b99c50..576ec83 100644
+--- a/configure.acr
++++ b/configure.acr
+@@ -40,7 +40,7 @@ CHECK WIDEC_CURSES <<EOF
+ echo "#define _XOPEN_SOURCE_EXTENDED" > test.c \
+ echo "#include<$CURSES_INCLUDE>" >> test.c \
+ echo "main(){ addwstr(L\"\"); }" >> test.c \
+-eval \$${COMPILER} ${CXXFLAGS} ${LDFLAGS} test.c >/dev/null 2>&1 \
++eval \$${COMPILER} ${CXXFLAGS} test.c ${LDFLAGS} >/dev/null 2>&1 \
+ if [ $? = 0 ]; then WIDEC_CURSES=1; else WIDEC_CURSES=0; fi \
+ rm test.c
+ <<EOF
+diff --git a/src/Makefile.acr b/src/Makefile.acr
+index 5e4a611..1ffd124 100644
+--- a/src/Makefile.acr
++++ b/src/Makefile.acr
+@@ -17,7 +17,7 @@ OBJS=$(SRCS:.cc=.o)
+ all: $(PKGNAME)
+ 
+ $(PKGNAME): $(OBJS)
+-	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJS)
++	$(CXX) $(CXXFLAGS) -o $@ $(OBJS) $(LDFLAGS)
+ 
+ .cc.o:
+ 	$(CXX) $(CXXFLAGS) -c $<
+-- 
+1.6.1
+
