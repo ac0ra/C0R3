@@ -1,0 +1,2 @@
+Copyright 2018 Adam Grigolato. Distributed under the terms of the GNU General Public
+License version 2.
