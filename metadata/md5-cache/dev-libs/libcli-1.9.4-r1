@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=Cisco-style (telnet) command-line interface library
+EAPI=4
+HOMEPAGE=http://sites.dparrish.com/libcli
+KEYWORDS=amd64 x86 ~amd64-linux
+LICENSE=LGPL-2.1
+SLOT=0
+SRC_URI=https://libcli.googlecode.com/files/libcli-1.9.4.tar.gz
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
+_md5_=b45b01c8d6e00dbb5e0f8c0b2ee76f4a

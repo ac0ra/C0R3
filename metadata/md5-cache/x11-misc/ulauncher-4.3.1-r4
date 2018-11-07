@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/python-distutils-extra[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=Application launcher for Linux
+EAPI=6
+HOMEPAGE=https://ulauncher.io
+IUSE=python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/python-distutils-extra[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/dbus-python[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pygobject:3[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pyinotify[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/python-levenshtein[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pyxdg[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/websocket-client[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-libs/gobject-introspection[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-libs/libappindicator:3[introspection] dev-libs/keybinder:3[introspection] net-libs/webkit-gtk:4/37[introspection] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=https://github.com/Ulauncher/Ulauncher/releases/download/4.3.1.r4/ulauncher_4.3.1.r4.tar.gz
+_eclasses_=distutils-r1	674dae153419b2200ae54e879cc65b57	eutils	792f83d5ec9536cb5ccef375469d8bde	multibuild	293f364715a9786d81588224c129b704	multilib	d062ae4ba2fc40a19c11de2ad89b6616	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	ff5bed0d9bac3da43fe84e2179943e8e	python-utils-r1	b5fdfa15cbe2f6299a482bf5d0c5925d	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	xdg-utils	9ef13b5c5bcf0c50d6aa53692d8e441c
+_md5_=6a01fa7de082845b2b8f397fcfc41f3f

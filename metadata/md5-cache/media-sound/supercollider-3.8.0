@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=media-libs/alsa-lib sys-libs/readline:0= x11-libs/libXt avahi? ( net-dns/avahi ) fftw? ( sci-libs/fftw:3.0= ) jack? ( media-sound/jack-audio-connection-kit ) portaudio? ( media-libs/portaudio ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtpositioning:5 dev-qt/qtsensors:5 dev-qt/qtwebkit:5 ) sndfile? ( media-libs/libsndfile ) wiimote? ( app-misc/cwiid ) dev-libs/icu virtual/pkgconfig emacs? ( virtual/emacs ) gedit? ( app-editors/gedit ) vim? ( app-editors/vim ) sys-devel/make >=dev-util/cmake-2.8.12
+DESCRIPTION=An environment and a programming language for real time audio synthesis.
+EAPI=6
+HOMEPAGE=https://supercollider.github.io/
+IUSE=avahi cpu_flags_x86_sse cpu_flags_x86_sse2 debug emacs +fftw gedit +gpl3 jack +portaudio qt5 server +sndfile static-libs vim wiimote
+KEYWORDS=~x86 ~amd64
+LICENSE=GPL-2 gpl3? ( GPL-3 )
+RDEPEND=media-libs/alsa-lib sys-libs/readline:0= x11-libs/libXt avahi? ( net-dns/avahi ) fftw? ( sci-libs/fftw:3.0= ) jack? ( media-sound/jack-audio-connection-kit ) portaudio? ( media-libs/portaudio ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtpositioning:5 dev-qt/qtsensors:5 dev-qt/qtwebkit:5 ) sndfile? ( media-libs/libsndfile ) wiimote? ( app-misc/cwiid )
+REQUIRED_USE=^^ ( jack portaudio )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/supercollider/supercollider/releases/download/Version-3.8.0/SuperCollider-3.8.0-Source-linux.tar.bz2
+_eclasses_=cmake-utils	ac5bd012586c6cf0d9826400d9de2830	eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	multilib	d062ae4ba2fc40a19c11de2ad89b6616	readme.gentoo-r1	2b27b7fcc73685ec7e0456c3b48a2fff	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=0c7198d7a1543fe87186670b5e2fcb1d
