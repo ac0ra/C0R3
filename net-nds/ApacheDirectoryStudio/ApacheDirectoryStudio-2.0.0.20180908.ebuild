@@ -8,7 +8,7 @@ inherit eutils versionator
 
 MY_PV=$(replace_version_separator 3 '.v')
 MY_PN="${PN}"
-MY_PKGM=12
+MY_PKGM=14
 
 
 DESCRIPTION="Apache Directory Studio is an universal LDAP directory tool."
