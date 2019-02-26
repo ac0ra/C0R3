@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst postrm prepare unpack
+DEPEND=>=dev-util/patchelf-0.9_p20180129 >=sys-apps/sed-4
+DESCRIPTION=Spotify is a social music platform
+EAPI=6
+HOMEPAGE=https://www.spotify.com/ch-de/download/previews/
+IUSE=libnotify systray pax_kernel pulseaudio
+KEYWORDS=~amd64
+LICENSE=Spotify
+RDEPEND=dev-libs/openssl:0 dev-libs/nss gnome-base/gconf gnome-extra/zenity media-libs/alsa-lib media-libs/harfbuzz media-libs/fontconfig media-libs/mesa net-misc/curl[ssl] net-print/cups[ssl] x11-libs/gtk+:2 x11-libs/libXScrnSaver x11-libs/libXtst dev-python/pygobject:3 dev-python/dbus-python libnotify? ( x11-libs/libnotify ) pulseaudio? ( media-sound/pulseaudio ) systray? ( gnome-extra/gnome-integration-spotify )
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.1.0.237.g378f6f25-11_amd64.deb
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	gnome2-utils	22ebae0b986793be079d9d93fa16a8ea	multilib	d062ae4ba2fc40a19c11de2ad89b6616	pax-utils	ecf634cba91bb9591a8fdb6f6145f1bb	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	unpacker	f40f7b4bd5aa88c2a4ba7b0d1e0ded70	xdg-utils	9ef13b5c5bcf0c50d6aa53692d8e441c
+_md5_=e2bcdc7f507656bd5ec51e08763710be
