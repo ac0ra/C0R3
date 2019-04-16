@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install postinst prepare setup unpack
+DEPEND=net-misc/curl udev? ( || ( ( dev-lang/python:3.6 dev-python/pyparsing[python_targets_python3_6(-),python_single_target_python3_6(+)] ) ) ) virtual/pkgconfig >=dev-vcs/git-1.8.2.1
+DESCRIPTION=Hardware (PCI, USB, OUI, IAB) IDs databases
+EAPI=6
+HOMEPAGE=https://github.com/gentoo/hwids
+IUSE=+net +pci +udev +usb
+LICENSE=|| ( GPL-2 BSD ) public-domain
+RDEPEND=udev? ( virtual/udev ) !<sys-apps/pciutils-3.1.9-r2 !<sys-apps/usbutils-005-r1
+SLOT=0
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	git-r3	00f60a84fc7b499c99edfe99caea9f95	multilib	d062ae4ba2fc40a19c11de2ad89b6616	python-any-r1	3b48a54b2b31a6bc928e459fec3adb54	python-utils-r1	b5fdfa15cbe2f6299a482bf5d0c5925d	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	udev	574b4c7244556c7ee81b2b45f80c6674
+_md5_=a99b5bd6ea8b1465955214725843fdbc
