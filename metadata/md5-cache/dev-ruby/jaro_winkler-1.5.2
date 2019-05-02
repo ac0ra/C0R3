@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=dev-ruby/bundler dev-ruby/minitest dev-ruby/rake dev-ruby/rake-compiler ruby_targets_ruby23? ( dev-lang/ruby:2.3 ) ruby_targets_ruby24? ( dev-lang/ruby:2.4 ) ruby_targets_ruby23? ( doc? ( dev-ruby/rake[ruby_targets_ruby23] ) ) ruby_targets_ruby24? ( doc? ( dev-ruby/rake[ruby_targets_ruby24] ) ) ruby_targets_ruby23? ( test? ( dev-ruby/rake[ruby_targets_ruby23] ) ) ruby_targets_ruby24? ( test? ( dev-ruby/rake[ruby_targets_ruby24] ) ) ruby_targets_ruby23? ( virtual/rubygems[ruby_targets_ruby23] ) ruby_targets_ruby24? ( virtual/rubygems[ruby_targets_ruby24] ) test? ( ruby_targets_ruby23? ( virtual/rubygems[ruby_targets_ruby23] ) ruby_targets_ruby24? ( virtual/rubygems[ruby_targets_ruby24] ) )
+DESCRIPTION=Implementation of Jaro-Winkler distance algorithm
+EAPI=6
+HOMEPAGE=https://github.com/tonytonyjan/jaro_winkler
+IUSE=elibc_FreeBSD ruby_targets_ruby23 ruby_targets_ruby24 doc test test
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=ruby_targets_ruby23? ( dev-lang/ruby:2.3 ) ruby_targets_ruby24? ( dev-lang/ruby:2.4 ) ruby_targets_ruby23? ( virtual/rubygems[ruby_targets_ruby23] ) ruby_targets_ruby24? ( virtual/rubygems[ruby_targets_ruby24] )
+REQUIRED_USE=|| ( ruby_targets_ruby23 ruby_targets_ruby24 )
+SLOT=0
+SRC_URI=mirror://rubygems/jaro_winkler-1.5.2.gem
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	java-utils-2	3c52cbe53976e882e4adeaf6bde28de0	multilib	d062ae4ba2fc40a19c11de2ad89b6616	ruby-fakegem	9652a5d6e78586973d23226d8fd77713	ruby-ng	e52d9a73c7757cdc3b195bcd5cf9d389	ruby-utils	453e0fe0dd06baac93b584c91528cc62	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=c705c85ef7652ff11456fb7a8180e483
