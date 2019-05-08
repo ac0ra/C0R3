@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
-DEPEND=app-accessibility/at-spi2-core dev-libs/glib:2 dev-libs/libxml2:2 x11-libs/cairo gnome-base/librsvg:2 media-libs/gstreamer:0.10 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:3 x11-libs/libX11 x11-libs/libXext x11-libs/libXtst libnotify? ( x11-libs/libnotify ) x11-libs/pango app-text/scrollkeeper dev-util/intltool sys-devel/gettext virtual/pkgconfig doc? ( gnome-base/libgnome ) >=app-portage/elt-patches-20170815 app-arch/xz-utils >=sys-apps/sed-4 dev-util/desktop-file-utils x11-misc/shared-mime-info
+DEPEND=app-accessibility/at-spi2-core dev-libs/glib:2 dev-libs/libxml2:2 x11-libs/cairo gnome-base/librsvg:2 media-libs/gstreamer:0.10 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:3 x11-libs/libX11 x11-libs/libXext x11-libs/libXtst libnotify? ( x11-libs/libnotify ) x11-libs/pango app-text/scrollkeeper dev-util/intltool sys-devel/gettext virtual/pkgconfig doc? ( gnome-base/libgnome ) >=app-portage/elt-patches-20170815 app-arch/xz-utils dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=Extensible scalable virtual keyboard for GNOME
 EAPI=4
 HOMEPAGE=http://florence.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-accessibility/at-spi2-core dev-libs/glib:2 dev-libs/libxml2:2 x11-libs/cairo gnome-base/librsvg:2 media-libs/gstreamer:0.10 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:3 x11-libs/libX11 x11-libs/libXext x11-libs/libXtst libnotify? ( x11-libs/libnotify ) x11-libs/pango
 SLOT=0
 SRC_URI=mirror://sourceforge/florence/florence-0.6.0.tar.bz2
-_eclasses_=eapi7-ver	756b3f27d8e46131d5cf3c51bd876446	eutils	792f83d5ec9536cb5ccef375469d8bde	gnome.org	532d56d07b9eace4831aaa817d2b756a	gnome2	21c81ea94c12e45a63f7f14fba666e3d	gnome2-utils	c6060f4ab634aca444c4b2176b0f3877	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	versionator	99ae9d758cbe7cfed19170e7d48f5a9c	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	93b2dfbb00a09161e1e7f6360c0f7f6b
+_eclasses_=eapi7-ver	756b3f27d8e46131d5cf3c51bd876446	eutils	792f83d5ec9536cb5ccef375469d8bde	gnome.org	532d56d07b9eace4831aaa817d2b756a	gnome2	21c81ea94c12e45a63f7f14fba666e3d	gnome2-utils	532371cfcba45b2ab0d2950547c97d95	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	versionator	99ae9d758cbe7cfed19170e7d48f5a9c	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	93b2dfbb00a09161e1e7f6360c0f7f6b
 _md5_=5722e316423d1ae1553a16a497e669a4
