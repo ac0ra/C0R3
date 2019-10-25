@@ -1,5 +1,5 @@
 DEFINED_PHASES=config install postinst postrm preinst prepare unpack
-DEPEND=dev-lang/python:2.7 >=dev-util/patchelf-0.9 ovftool? ( app-admin/chrpath ) sys-libs/ncurses:5 sys-libs/readline:0 >=sys-apps/sed-4 virtual/pkgconfig
+DEPEND=dev-lang/python:2.7 >=dev-util/patchelf-0.9 ovftool? ( app-admin/chrpath ) sys-libs/ncurses:5 sys-libs/readline:0 virtual/pkgconfig
 DESCRIPTION=Emulate a complete PC without the performance overhead of most emulators
 EAPI=6
 HOMEPAGE=http://www.vmware.com/products/workstation/
@@ -12,5 +12,5 @@ REQUIRED_USE=server? ( modules ) vmware-tools-darwin? ( macos-guests ) vmware-to
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-14.1.4-10722678.x86_64.bundle macos-guests? ( https://github.com/DrDonk/unlocker/archive/3.0.2.tar.gz -> unlocker-3.0.2.tar.gz vmware-tools-darwinPre15? ( https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/10.1.4/10700604/packages/com.vmware.fusion.tools.darwinPre15.zip.tar -> com.vmware.fusion.tools.darwinPre15-14.1.4.10722678.zip.tar ) vmware-tools-darwin? ( https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/10.1.4/10700604/packages/com.vmware.fusion.tools.darwin.zip.tar -> com.vmware.fusion.tools.darwin-14.1.4.10722678.zip.tar ) ) systemd? ( https://github.com/akhuettel/systemd-vmware/archive/gentoo-02.tar.gz -> vmware-systemd-gentoo-02.tgz )
-_eclasses_=eapi7-ver	d97a56a62c7df8614afddcb25f5ff00f	eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	gnome2-utils	22ebae0b986793be079d9d93fa16a8ea	multilib	d062ae4ba2fc40a19c11de2ad89b6616	pam	3e788d86170dfcd5b06824d898315e18	readme.gentoo-r1	2b27b7fcc73685ec7e0456c3b48a2fff	systemd	3165c885f3c71ffae7a867d931fb0e07	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	xdg-utils	9ef13b5c5bcf0c50d6aa53692d8e441c
+_eclasses_=eapi7-ver	756b3f27d8e46131d5cf3c51bd876446	eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	gnome2-utils	532371cfcba45b2ab0d2950547c97d95	multilib	d062ae4ba2fc40a19c11de2ad89b6616	pam	756a09f72c4cdbb55f2694c95f1e0860	readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190	systemd	3165c885f3c71ffae7a867d931fb0e07	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=bc0f954f8fe2e9d0ead2007c16f70ee5

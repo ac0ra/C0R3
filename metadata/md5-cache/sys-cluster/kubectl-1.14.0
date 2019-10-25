@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare test unpack
-DEPEND=dev-go/go-bindata >=dev-lang/go-1.8
+DEPEND=dev-go/go-bindata >=dev-lang/go-1.10
 DESCRIPTION=CLI to run commands against Kubernetes clusters
 EAPI=6
 HOMEPAGE=https://github.com/kubernetes/kubernetes https://kubernetes.io
@@ -8,5 +8,5 @@ LICENSE=Apache-2.0
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/kubernetes/kubernetes/archive/v1.14.0.tar.gz -> kubernetes-1.14.0.tar.gz
-_eclasses_=bash-completion-r1	a819349fcf7c78405be4b3552a60a00c	golang-base	e3b49d3365185b0b0e29f2713b094420	golang-build	e7df0915974352579de1da5d1f8ad692	golang-vcs-snapshot	f92d5438a012f5e6665f8e7ffb1427a2	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
+_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	golang-base	c57d2c3f9e1a02d0feb8b87c7b689892	golang-build	dc25bafa8fc1305a4de66a0a448472e7	golang-vcs-snapshot	12177e83bede6f7fb87eae383864b40b	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
 _md5_=b5b07d5d9cd12468a189712e02476532

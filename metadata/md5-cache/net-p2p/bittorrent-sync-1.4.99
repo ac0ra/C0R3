@@ -8,5 +8,5 @@ LICENSE=BitTorrent
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=amd64? ( http://syncapp.bittorrent.com/1.4.99/btsync_x64-1.4.99.tar.gz )
-_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	systemd	3165c885f3c71ffae7a867d931fb0e07	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	user	8bc2845510e2109af75e3eeac607ec81
+_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	systemd	3165c885f3c71ffae7a867d931fb0e07	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	user	e68863263b1e8611dacf381bec5c8b2b
 _md5_=e52ae066d508799d77a059a497168596

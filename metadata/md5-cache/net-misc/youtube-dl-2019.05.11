@@ -1,16 +1,16 @@
-BDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_python3_5? ( dev-lang/python:3.5 ) python_targets_python3_6? ( dev-lang/python:3.6 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_python3_4(-)?,python_targets_python3_5(-)?,python_targets_python3_6(-)?,-python_single_target_python2_7(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-)]
+BDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_5? ( dev-lang/python:3.5 ) python_targets_python3_6? ( dev-lang/python:3.6 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_python3_5(-)?,python_targets_python3_6(-)?,-python_single_target_python2_7(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-)]
 DEFINED_PHASES=compile configure install postinst prepare test
-DEPEND=dev-python/setuptools[python_targets_python2_7(-)?,python_targets_python3_4(-)?,python_targets_python3_5(-)?,python_targets_python3_6(-)?,-python_single_target_python2_7(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-)]
+DEPEND=dev-python/setuptools[python_targets_python2_7(-)?,python_targets_python3_5(-)?,python_targets_python3_6(-)?,-python_single_target_python2_7(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-)]
 DESCRIPTION=Download videos from YouTube.com (and more sites...)
 EAPI=7
 HOMEPAGE=https://rg3.github.com/youtube-dl/
-IUSE=python_targets_python2_7 python_targets_python3_4 python_targets_python3_5 python_targets_python3_6
+IUSE=python_targets_python2_7 python_targets_python3_5 python_targets_python3_6
 KEYWORDS=~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris
 LICENSE=public-domain
-RDEPEND=dev-python/setuptools[python_targets_python2_7(-)?,python_targets_python3_4(-)?,python_targets_python3_5(-)?,python_targets_python3_6(-)?,-python_single_target_python2_7(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_python3_5? ( dev-lang/python:3.5 ) python_targets_python3_6? ( dev-lang/python:3.6 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_python3_4(-)?,python_targets_python3_5(-)?,python_targets_python3_6(-)?,-python_single_target_python2_7(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-)]
-REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_4 python_targets_python3_5 python_targets_python3_6 )
+RDEPEND=dev-python/setuptools[python_targets_python2_7(-)?,python_targets_python3_5(-)?,python_targets_python3_6(-)?,-python_single_target_python2_7(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_5? ( dev-lang/python:3.5 ) python_targets_python3_6? ( dev-lang/python:3.6 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_python3_5(-)?,python_targets_python3_6(-)?,-python_single_target_python2_7(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_5 python_targets_python3_6 )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://youtube-dl.org/downloads/2019.05.11/youtube-dl-2019.05.11.tar.gz
-_eclasses_=bash-completion-r1	a819349fcf7c78405be4b3552a60a00c	distutils-r1	8595c9c7530ac3963f3aa0d77aa7e2d8	multibuild	293f364715a9786d81588224c129b704	multilib	d062ae4ba2fc40a19c11de2ad89b6616	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	ff5bed0d9bac3da43fe84e2179943e8e	python-utils-r1	b5fdfa15cbe2f6299a482bf5d0c5925d	readme.gentoo-r1	2b27b7fcc73685ec7e0456c3b48a2fff	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
+_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	distutils-r1	8595c9c7530ac3963f3aa0d77aa7e2d8	multibuild	40fe59465edacd730c644ec2bc197809	multilib	d062ae4ba2fc40a19c11de2ad89b6616	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	ce1cd23cfdc1848e8e32743efe34f299	python-utils-r1	08e17157a6807add7db1f8d01e7e391f	readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
 _md5_=b6a3f6d4317e621c41548a23eb01d2ea
