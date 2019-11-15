@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=>=dev-libs/openssl-1.0.1:0 mpi? ( virtual/mpi ) opencl? ( virtual/opencl ) kerberos? ( virtual/krb5 ) pcap? ( net-libs/libpcap ) dev-libs/gmp:* sys-libs/zlib app-arch/bzip2 >=dev-vcs/git-1.8.2.1
+DESCRIPTION=fast password cracker
+EAPI=6
+HOMEPAGE=http://www.openwall.com/john/
+IUSE=custom-cflags kerberos mpi opencl openmp pcap
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/openssl-1.0.1:0 mpi? ( virtual/mpi ) opencl? ( virtual/opencl ) kerberos? ( virtual/krb5 ) pcap? ( net-libs/libpcap ) dev-libs/gmp:* sys-libs/zlib app-arch/bzip2 !app-crypt/johntheripper
+SLOT=0
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	git-r3	00f60a84fc7b499c99edfe99caea9f95	multilib	d062ae4ba2fc40a19c11de2ad89b6616	pax-utils	ecf634cba91bb9591a8fdb6f6145f1bb	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
+_md5_=95322037e08c6e02e8f1631cae8c4477

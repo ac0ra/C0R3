@@ -1,0 +1,14 @@
+DEFINED_PHASES=install nofetch postinst unpack
+DEPEND=app-admin/chrpath virtual/pkgconfig virtual/pkgconfig
+DESCRIPTION=DisplayLink USB Graphics Software
+EAPI=6
+HOMEPAGE=http://www.displaylink.com/downloads/ubuntu
+IUSE=systemd
+KEYWORDS=~x86 ~amd64
+LICENSE=DisplayLink
+RDEPEND=>=sys-devel/gcc-4.8.3 >=x11-drivers/evdi-1.5 virtual/libusb:1 || ( x11-drivers/xf86-video-modesetting >=x11-base/xorg-server-1.17.0 ) !systemd? ( sys-power/pm-utils )
+RESTRICT=fetch
+SLOT=0
+SRC_URI=displaylink-driver-5.1.26.zip
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	systemd	3165c885f3c71ffae7a867d931fb0e07	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	udev	7752f306eec7b286d00bdb47b763e7ac
+_md5_=eb7b8ee8a987280e21a4a28702eebce4
