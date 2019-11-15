@@ -109,7 +109,7 @@ src_install() {
 
 	if use opencl; then
 		insinto /etc/john
-		doins -r run/kernels
+		doins -r run/opencl
 	fi
 
 	# config files
